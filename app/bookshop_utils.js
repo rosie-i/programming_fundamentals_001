@@ -17,10 +17,17 @@ function isInStock(book) {
         return false
     };
 }
+
+function getTotalOrderPrice(price, quantity) {
+    let priceBeforeVAT = price * quantity;
+    return addVAT(priceBeforeVAT);
+}
+
 module.exports = {
     addVAT,
     getFullName,
     makeHalfPrice,
     countBooks,
-    isInStock
+    isInStock,
+    getTotalOrderPrice
 };
